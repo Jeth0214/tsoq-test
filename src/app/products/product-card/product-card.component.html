@@ -1,0 +1,18 @@
+<div class="card bg-white rounded-xl p-2 relative hover:shadow-xl transition">
+  <div class="card-image flex justify-center items-center bg-primary-200 rounded-lg  py-6">
+    <img loading="lazy" class=" mix-blend-darken" [src]="product?.image" [alt]="product?.name">   
+    <button class="absolute z-10 top-3 left-3 bg-gray-50 rounded-lg border border-gray-200 p-2 hover:bg-gray-200 translation">
+      <img loading="lazy" src="./icons/maximize-4.svg" alt="maximize">
+    </button> 
+  </div>
+  <div class="card-body mt-3 mb-2 flex items-end justify-between">
+    <div>
+      <button class="text-3xl text-white bg-gray-800 px-2  rounded-lg hover:bg-gray-100 hover:text-gray-900 hover:border hover:border-gray-900 transition">+</button>
+    </div>
+    <div class="font-bold">
+      <h2 class="text-dark-500 ">{{product?.name}}</h2>
+      <p class="mb-2">رس{{product?.price}}</p>
+    </div>
+    
+  </div>
+</div>

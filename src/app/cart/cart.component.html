@@ -1,0 +1,31 @@
+<section class="px-2 py-3">
+  <div class="flex gap-2 justify-between items-center">
+    <button class="py-1 px-2 text-xs bg-gray-100 text-gray-600 inline-flex justify-center items-center gap-1 rounded-lg">
+      <span>ماسح الضوئي</span>
+      <img loading="lazy" src="./icons/scan.svg" alt="scan">
+    </button>
+    <button class="py-1 px-2 text-xs bg-white text-gray-600 inline-flex justify-center items-center gap-1 rounded-lg border border-gray-300">
+      <span>إعادة تعيين الطلب</span>
+      <img loading="lazy" src="./icons/trash-dark.svg" alt="scan">
+    </button>
+    <div class=" text-gray-800 font-bold inline-flex text-sm  gap-1 ">
+      <span>تفاصيل الطلب (05)</span>
+      <img loading="lazy" src="./icons/shopping-bag-fill.svg" alt="scan">
+    </div>
+  </div>
+
+  <div class="customer">
+    <app-cart-customer></app-cart-customer>
+  </div>
+
+  <div class="cart list">
+    <app-cart-lists></app-cart-lists>
+  </div>
+
+  <div class="flex justify-between items-center gap-2">
+    <button class="w-full py-3 border border-primary-950 text-primary-950 rounded-xl hover:bg-gray-200  transition-all">طباعة الفاتورة</button>
+    <button class="w-full py-3 bg-primary-950 text-white rounded-xl  hover:border-primary-950  hover:bg-dark-500 transition-all">دفع</button>
+  </div>
+</section>
+
+

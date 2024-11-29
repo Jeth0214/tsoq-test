@@ -1,0 +1,39 @@
+@for(product of products; track product.id) {
+  <div class="border border-gray-100 rounded-lg bg-white p-1 flex mb-3 gap-2 justify-between">
+    <div class="product-buttons flex justify-between flex-col ">
+      <button class="bg-error rounded-lg p-2 self-start">
+        <span class="sr-only">Delete product</span>
+        <img loading="lazy" src="./icons/trash-white.svg" alt="delete">
+      </button>
+      <div class="flex gap-1 items-center">
+        <button class="border border-gray-300 p-1 rounded-lg">
+          <span class="sr-only">add quantity</span>
+          <img loading="lazy" src="./icons/add.svg" alt="add">
+        </button>
+        <p class="mx-1">  4 </p>
+          <button class="border border-gray-300 p-1 rounded-lg">
+            <span class="sr-only">less quantity</span>
+            <img loading="lazy" src="./icons/minus.svg" alt="minus">
+          </button>
+        <button class="border border-gray-300 p-2 rounded-lg">
+          <span class="sr-only">Edit quantity</span>
+          <img loading="lazy" src="./icons/edit-2.svg" alt="edit">
+        </button>
+      </div>
+    </div>
+    <div class="product-details text-right text-gray-600">
+      <h3 class="text-xl font-bold text-dark-500">{{product.name}}</h3>
+      <div class="text-xs my-2">
+        <span class="border border-gray-200 rounded p-1">مقاس:صغير</span>
+        <span class="border border-gray-200 rounded p-1 mr-1">مكونات:بدون طميطم</span>
+      </div>
+      <p>
+        15.00ر.س
+      </p>
+    </div>
+
+    <div class="product-image bg-primary-200 rounded-lg w-[80px] ">
+      <img class=" mix-blend-darken w-full h-auto" loading="lazy" [src]="product.image" [alt]="product.name">
+    </div>
+  </div>
+}
