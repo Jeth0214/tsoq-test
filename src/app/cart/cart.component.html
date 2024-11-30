@@ -18,14 +18,273 @@
     <app-cart-customer></app-cart-customer>
   </div>
 
-  <div class="cart list">
+  <div class="cart list ">
     <app-cart-lists></app-cart-lists>
   </div>
 
+  <div class="bg-primary-100 rounded-lg p-2 -mt-9 -mb-4 z-50 relative">
+    
+    <div class="total-backdrop "></div>
+
+    <p class="text-gray-900 font-medium text-right text-base">ملخص الدفع</p>
+  
+    <div class="cart-calculation mt-3 mb-6">
+      <div class="flex justify-between mb-2">
+        <p class="text-right ">1500- رس</p>
+        <p class="text-right  text-gray-900">مجموع</p>
+      </div>
+      <div class="flex justify-between">
+        <p class="text-right">1500- رس</p>
+        <p class="text-right  text-gray-900">الضريبة الإجمالية</p>
+      </div>
+      <div class="flex justify-between">
+        <p class="text-right">1500- رس</p>
+        <p class="text-right  text-gray-900">الخصم</p>
+      </div>
+    </div>
+
+    <div class="total relative border-dashed border-t-4 ">
+        <div class="mt-6 mb-3">
+          <div class="flex justify-between mb-2">
+            <p class="text-right font-bold text-gray-900">1500- رس</p>
+            <p class="text-right font-bold text-gray-900">الاجمالي</p>
+          </div>
+        </div>
+    </div>
+  
+  
+  </div>
+
+  <button class="w-full pb-2 pt-5 px-5 mb-2 rounded-lg bg-gray-300 flex justify-between " type="button">
+    <img loading="lazy" src="./icons/add.svg" alt="Add button">
+    <span>إضافة كود خصم</span>
+  </button>
+
   <div class="flex justify-between items-center gap-2">
     <button class="w-full py-3 border border-primary-950 text-primary-950 rounded-xl hover:bg-gray-200  transition-all">طباعة الفاتورة</button>
-    <button class="w-full py-3 bg-primary-950 text-white rounded-xl  hover:border-primary-950  hover:bg-dark-500 transition-all">دفع</button>
+    <button class="w-full py-3 bg-primary-950 text-white rounded-xl  hover:border-primary-950  hover:bg-dark-500 transition-all" data-modal-target="bottom-left-modal" data-modal-toggle="bottom-left-modal" >دفع</button>
   </div>
 </section>
+
+<div id="bottom-left-modal" data-modal-placement="bottom-left" tabindex="-1"
+  class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 backdrop-opacity-10 backdrop-invert bg-white/20  overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+  <div class="relative w-full max-w-[980px]  max-h-full ">
+    <!-- Modal content -->
+    <div class="relative bg-white rounded-lg shadow flex flex-col md:flex-row justify-between ">
+      <div class="p-6 flex-1">
+        <div class="flex justify-between items-end">
+          <button data-modal-hide="bottom-left-modal" type="button">
+            <span class="sr-only">Close Modal</span>
+            <img loading="lazy" src="./icons/X.svg" alt="delete icon">
+          </button>
+          <p class="text-gray-900 font-medium">الدفع</p>
+        </div>
+    
+        <div class=" my-4 grid grid-cols-2 gap-2">
+          <button type="button" class="rounded-lg border border-gray-300 py-3 pr-5 pl-6 text-right">
+            <span class="mr-2">نقدا</span>
+            <img class="inline" loading="lazy" src="./icons/moneys.svg" alt="money icon">
+          </button>
+          <button type="button" class="rounded-lg border border-gray-300 bg-primary-200 py-3 pr-5 pl-6 text-right">
+            <span class="mr-2">نقدا</span>
+            <img class="inline" loading="lazy" src="./icons/card-blue.svg" alt="money icon">
+          </button>
+        </div>
+    
+        <form>
+          <label for="money" class="block mb-2 text-sm font-medium text-right text-gray-500 ">
+            <span class="mr-2">دفع عن طريق بطاقة الدفع</span>
+            <img class="inline" loading="lazy" src="./icons/card-blue.svg" alt="money icon">
+          </label>
+          <div class="pt-2 mb-2 relative  text-gray-muted">
+            <input class=" h-10 pr-9 w-full  rounded-lg text-sm text-right border border-gray-200" type="text" name="card"
+              placeholder="عبر البطاقة">
+            <img class="absolute right-0 top-0 mt-5 mr-3" loading="lazy" src="./icons/card-dark.svg" alt="card">
+          </div>
+          <div class="pt-2 mb-2 relative  text-gray-muted">
+            <input class=" h-10 pr-9 w-full  rounded-lg text-sm text-right border border-gray-200" type="text" name="money"
+              placeholder="عبر البطاقة">
+            <img class="absolute right-0 top-0 mt-5 mr-2" loading="lazy" src="./icons/moneys.svg" alt="money icon">
+          </div>
+    
+          <div class="grid gap-1 grid-cols-5 md:grid-cols-7 mb-2">
+            <button class="border border-gray-200 rounded-lg text-gray-500 py-2" type="button">1</button>
+            <button class="border border-gray-200 rounded-lg text-gray-500 py-2" type="button">2</button>
+            <button class="border border-gray-200 rounded-lg text-gray-500 py-2" type="button">3</button>
+            <button class="border border-gray-200 rounded-lg text-gray-500 py-2" type="button">4</button>
+            <button class="border border-gray-200 rounded-lg text-gray-500 py-2" type="button">5</button>
+            <button class="border border-gray-200 rounded-lg text-gray-500 py-2" type="button">6</button>
+            <button class="border border-gray-200 rounded-lg text-gray-500 py-2" type="button">7</button>
+            <button class="border border-gray-200 rounded-lg text-gray-500 py-2" type="button">8</button>
+            <button class="border border-gray-200 rounded-lg text-gray-500 py-2" type="button">9</button>
+            <button class="border border-gray-200 rounded-lg text-gray-500 py-2" type="button">0</button>
+            <button class="border border-gray-200 rounded-lg text-gray-500 py-2 col-span-5  md:col-span-4" type="button">C</button>
+          </div>
+ 
+    
+    
+          <div class="flex justify-between my-6">
+            <p class="text-error font-bold">1500- رس</p>
+            <p class="text-gray-900 font-bold">المتبقي</p>
+          </div>
+    
+          <div class="flex justify-between items-center gap-2">
+            <button
+              class="w-full py-3 bg-primary-950 text-white rounded-xl  hover:border-primary-950  hover:bg-dark-500 transition-all"
+              data-modal-target="bottom-left-modal" data-modal-toggle="bottom-left-modal">دفع</button>
+            <button
+              class="w-full py-3 border border-primary-950 text-primary-950 rounded-xl hover:bg-gray-200  transition-all">الغاء</button>
+          </div>
+    
+        </form>
+    
+    
+    
+      </div>
+    
+      <div class="py-6 px-4 border border-l-2 border-gray-300">
+        <p class="text-right text-gray-900 font-medium">تاكيد الطلب</p>
+        <div class="customer">
+          <app-cart-customer></app-cart-customer>
+        </div>
+    
+        <div class="cart list">
+          <app-cart-lists></app-cart-lists>
+    
+          <div class="bg-primary-100 rounded-lg p-2 ">
+            <p class="text-gray-900 font-medium text-right text-base">ملخص الدفع</p>
+    
+            <div class="my-3">
+              <div class="flex justify-between mb-2">
+                <p class="text-right font-bold text-gray-900">100- رس</p>
+                <p class="text-right  text-gray-900">الخصم</p>
+              </div>
+              <div class="flex justify-between">
+                <p class="text-right font-bold text-gray-900">1500- رس</p>
+                <p class="text-right  text-gray-900">الاجمالي</p>
+              </div>
+            </div>
+    
+    
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Bottom Left Modal -->
+<div id="bottom-left-modal" data-modal-placement="bottom-left" tabindex="-1"
+  class="fixed top-0 left-0 right-0 backdrop-opacity-10 backdrop-invert bg-white/20 z-50  hidden w-full p-4  overflow-auto md:inset-0  max-h-full">
+  <div class="relative w-full max-w-[980px] max-h-full">
+        <!-- Modal content -->
+        <div class="relative bg-white rounded-lg shadow grid  md:grid-cols-2 justify-between ">
+          <div class="p-6">
+            <div class="flex justify-between items-end">
+              <button data-modal-hide="bottom-left-modal" type="button">
+                  <span class="sr-only">Close Modal</span>
+                  <img loading="lazy" src="./icons/X.svg" alt="delete icon">
+              </button>
+              <p class="text-gray-900 font-medium">الدفع</p>
+            </div>
+
+            <div class=" my-4 grid grid-cols-2 gap-2">
+              <button type="button" class="rounded-lg border border-gray-300 py-3 pr-5 pl-6 text-right">
+                <span class="mr-2">نقدا</span>
+                <img class="inline" loading="lazy" src="./icons/moneys.svg" alt="money icon">
+              </button>
+              <button type="button" class="rounded-lg border border-gray-300 bg-primary-200 py-3 pr-5 pl-6 text-right">
+                <span class="mr-2">نقدا</span>
+                <img class="inline" loading="lazy" src="./icons/card-blue.svg" alt="money icon">
+              </button>
+            </div>
+
+            <form>
+              <label for="money" class="block mb-2 text-sm font-medium text-right text-gray-500 ">
+                <span  class="mr-2">دفع عن طريق بطاقة الدفع</span>
+                <img class="inline" loading="lazy" src="./icons/card-blue.svg" alt="money icon">
+              </label>
+              <div class="pt-2 mb-2 relative  text-gray-muted">
+                <input class=" h-10 pr-9 w-full  rounded-lg text-sm text-right border border-gray-200" type="text" name="card"
+                  placeholder="عبر البطاقة">
+                  <img class="absolute right-0 top-0 mt-5 mr-3" loading="lazy" src="./icons/card-dark.svg" alt="card">
+              </div>
+              <div class="pt-2 mb-2 relative  text-gray-muted">
+                <input class=" h-10 pr-9 w-full  rounded-lg text-sm text-right border border-gray-200" type="text" name="money"
+                  placeholder="عبر البطاقة">
+                  <img class="absolute right-0 top-0 mt-5 mr-2" loading="lazy" src="./icons/moneys.svg" alt="money icon">
+              </div>
+
+              <div class="grid gap-1 md:grid-cols-7 mb-2">
+                <button class="border border-gray-200 rounded-lg text-gray-500 py-2" type="button">1</button>
+                <button class="border border-gray-200 rounded-lg text-gray-500 py-2" type="button">2</button>
+                <button class="border border-gray-200 rounded-lg text-gray-500 py-2" type="button">3</button>
+                <button class="border border-gray-200 rounded-lg text-gray-500 py-2" type="button">4</button>
+                <button class="border border-gray-200 rounded-lg text-gray-500 py-2" type="button">5</button>
+                <button class="border border-gray-200 rounded-lg text-gray-500 py-2" type="button">6</button>
+                <button class="border border-gray-200 rounded-lg text-gray-500 py-2" type="button">7</button>
+              </div>
+              <div class="grid gap-1 md:grid-cols-7">
+                <button class="border border-gray-200 rounded-lg text-gray-500 py-2" type="button">8</button>
+                <button class="border border-gray-200 rounded-lg text-gray-500 py-2" type="button">9</button>
+                <button class="border border-gray-200 rounded-lg text-gray-500 py-2" type="button">0</button>
+                <button class="border border-gray-200 rounded-lg text-gray-500 py-2 col-span-4" type="button">C</button>
+              </div>
+
+
+              <div class="flex justify-between my-6">
+                <p class="text-error font-bold">1500- رس</p>
+                <p class="text-gray-900 font-bold">المتبقي</p>
+              </div>
+
+              <div class="flex justify-between items-center gap-2">
+                <button
+                  class="w-full py-3 bg-primary-950 text-white rounded-xl  hover:border-primary-950  hover:bg-dark-500 transition-all"
+                  data-modal-target="bottom-left-modal" data-modal-toggle="bottom-left-modal">دفع</button>
+                <button
+                  class="w-full py-3 border border-primary-950 text-primary-950 rounded-xl hover:bg-gray-200  transition-all">الغاء</button>
+              </div>
+              
+            </form>
+
+
+           
+          </div>
+
+          <div class="py-6 px-4 border border-l-2 border-gray-300">
+              <p class="text-right text-gray-900 font-medium">تاكيد الطلب</p>
+              <div class="customer">
+                <app-cart-customer></app-cart-customer>
+              </div>
+              
+              <div class="cart list">
+                <app-cart-lists></app-cart-lists>
+
+                <div class="bg-primary-100 rounded-lg p-2 ">
+                  <p class="text-gray-900 font-medium text-right text-base" >ملخص الدفع</p>
+
+                  <div class="my-3">
+                    <div class="flex justify-between mb-2">
+                      <p class="text-right font-bold text-gray-900">100- رس</p>
+                      <p class="text-right  text-gray-900">الخصم</p>
+                    </div>
+                    <div class="flex justify-between">
+                      <p class="text-right font-bold text-gray-900">1500- رس</p>
+                      <p class="text-right  text-gray-900">الاجمالي</p>
+                    </div>
+                  </div>
+
+
+                </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+
+
+
+
 
 

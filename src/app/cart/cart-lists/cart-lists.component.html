@@ -1,5 +1,5 @@
 @for(product of products; track product.id) {
-  <div class="border border-gray-100 rounded-lg bg-white p-1 flex mb-3 gap-2 justify-between">
+  <div class="border border-gray-100 rounded-lg bg-white p-1 flex mb-3 gap-2 justify-between hover:bg-gray-50">
     <div class="product-buttons flex justify-between flex-col ">
       <button class="bg-error rounded-lg p-2 self-start">
         <span class="sr-only">Delete product</span>
@@ -15,7 +15,7 @@
             <span class="sr-only">less quantity</span>
             <img loading="lazy" src="./icons/minus.svg" alt="minus">
           </button>
-        <button class="border border-gray-300 p-2 rounded-lg">
+        <button class="border border-gray-300 p-1.5 rounded-lg">
           <span class="sr-only">Edit quantity</span>
           <img loading="lazy" src="./icons/edit-2.svg" alt="edit">
         </button>
@@ -37,3 +37,6 @@
     </div>
   </div>
 }
+
+
+

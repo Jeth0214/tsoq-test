@@ -1,7 +1,7 @@
 <app-products-toolbar></app-products-toolbar>
 
 
-<section class="my-6 grid grid-cols-4   gap-2">
+<section class="my-6 grid grid-cols-2 lg:grid-cols-4   gap-2">
   @for( product of products; track product.id ) {
 
       <app-product-card [product]="product"></app-product-card>

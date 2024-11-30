@@ -2,12 +2,12 @@
   <app-nav-bar></app-nav-bar>
 </header>
 
-<main class="mt-10 flex flex-col md:flex-row gap-5">
-  <aside class="basis-1/3 bg-white rounded-lg">
+<main class="mt-10 grid md:grid-cols-4  lg:grid-cols-3 gap-5 items-start">
+  <aside class="md:col-span-2 lg:col-span-1 bg-white rounded-lg">
     <app-cart></app-cart>
   </aside>
 
-  <section  class="basis-auto md:basis-2/3">
+  <section  class="md:col-span-2 lg:col-span-2">
     <article >
       <app-products></app-products>
     </article>

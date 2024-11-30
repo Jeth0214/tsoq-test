@@ -20,6 +20,7 @@ module.exports = {
         'primary-950': '#04ACC9',
         'primary-500': '#5AC1DA',
         'primary-200': '#04ACC926',
+        'primary-100': '#F4F7FE',
         'body': '#F5F5F5'
       },
       fontFamily: {

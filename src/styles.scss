@@ -16,3 +16,43 @@ button {
 .container {
   max-width: 1400px;
 }
+
+
+// 
+.total::before {
+  content: "";
+
+  position: absolute;
+  left: -15px;
+  right: 0;
+  top: -20px;
+  width: 35px;
+  height: 35px;
+
+  border-radius: 50%;
+  background: #fff;
+}
+
+.total::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: -15px;
+  top: -20px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: #fff;
+  margin-left: auto;
+}
+
+.total-backdrop {
+
+      position: absolute;
+      top: -104px;
+      left: 0;
+      right: 0;
+      height: 104px;
+
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.20) 10.75%, #FFF 100%);
+}
